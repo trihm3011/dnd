@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import update from 'react/lib/update';
 import { DragDropContext } from 'react-dnd';
 import { default as TouchBackend } from 'react-dnd-touch-backend';
+import HTML5Backend from 'react-dnd-html5-backend';
+
 import Card from './Card';
 
 const style = {
@@ -71,4 +73,5 @@ class Container extends Component {
     }
 }
 
-export default DragDropContext(TouchBackend({ enableMouseEvents: true }))(Container);
+// export default DragDropContext(TouchBackend({ enableMouseEvents: true }))(Container);
+export default DragDropContext(HTML5Backend)(Container);
